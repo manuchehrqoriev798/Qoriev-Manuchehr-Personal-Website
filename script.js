@@ -40,16 +40,7 @@ buttons.forEach((button, index) => {
 
 
 
-// portfolio fillter 
-
-var mixer = mixitup('.portfolio-gallery',{
-    selectors: {
-        target: '.portfolio-box'
-    },
-    animation: {
-        duration: 500
-    }
-});
+// portfolio fillter - removed as portfolio section is now simplified
 
 
 // Initialize swiperjs 
@@ -78,19 +69,42 @@ var swiper = new Swiper(".mySwiper", {
     }
   });
 
+// Initialize Language Swiper
+var languageSwiper = new Swiper(".languageSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+      el: ".languageSwiper .swiper-pagination",
+      clickable: true,
+    },
+    autoplay:{
+        delay:3000,
+        disableOnInteraction:false,
+    },
+    loop: true,
+    breakpoints: {
+        576:{
+            slidesPerView:2,
+            spaceBetween:20,
+        },
+        992:{
+            slidesPerView:3,
+            spaceBetween:30,
+        },
+    }
+  });
 
 
-//   skill Progress bar 
 
-const first_skill = document.querySelector(".skill:first-child");
-const sk_counters = document.querySelectorAll(".counter span");
-const progress_bars = document.querySelectorAll(".skills svg circle");
+//   Language skill Progress bar 
+const first_language_skill = document.querySelector(".language-skill:first-child");
+const language_counters = document.querySelectorAll(".language-skill .counter span");
+const language_progress_bars = document.querySelectorAll(".language-skill svg circle");
 
 window.addEventListener("scroll",()=>{
-    if(!skillsPlayed)
-    skillsCounter();
+    if(!languageSkillsPlayed)
+    languageSkillsCounter();
 })
-
 
 function hasReached(el){
     let topPosition = el.getBoundingClientRect().top;
@@ -109,24 +123,23 @@ function updateCount(num,maxNum){
     }
 }
 
+let languageSkillsPlayed = false;
 
-let skillsPlayed = false;
-
-function skillsCounter(){
-    if(!hasReached(first_skill))return;
-    skillsPlayed = true;
-    sk_counters.forEach((counter,i)=>{
+function languageSkillsCounter(){
+    if(!first_language_skill || !hasReached(first_language_skill))return;
+    languageSkillsPlayed = true;
+    language_counters.forEach((counter,i)=>{
         let target = +counter.dataset.target;
         let strokeValue = 465 - 465 * (target / 100);
 
-        progress_bars[i].style.setProperty("--target",strokeValue);
+        language_progress_bars[i].style.setProperty("--target",strokeValue);
 
         setTimeout(()=>{
             updateCount(counter,target);
         },400)
     });
 
-    progress_bars.forEach(p => p.style.animation = "progress 2s ease-in-out forwards");
+    language_progress_bars.forEach(p => p.style.animation = "progress 2s ease-in-out forwards");
 }
 
 
@@ -183,11 +196,19 @@ ScrollReveal({
 
 ScrollReveal().reveal('.hero-info,.main-text,.proposal,.heading', { origin: "top" });
 ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });
-ScrollReveal().reveal('.about-content,.skills', { origin: "right" });
-ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero', { origin: "bottom" });
+ScrollReveal().reveal('.about-content,.skills,.resume-content', { origin: "right" });
+ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero,.skills-grid', { origin: "bottom" });
 
 
 
+
+// Update copyright year dynamically
+document.addEventListener('DOMContentLoaded', function() {
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+});
 
 // const themeSwitch = document.getElementById('theme-switch');
 // const body = document.body;

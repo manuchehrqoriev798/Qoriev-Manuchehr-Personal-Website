@@ -1378,16 +1378,6 @@ footer{
 }
 
 
-#progress-value{
-    display: grid;
-    height: calc(100% - 12px);
-    width: calc(100% - 12px);
-    background: var(--gradient-color-bg);
-    border-radius: 50%;
-    color: #fff;
-    place-items: center;
-    font-size: 25px;
-}
 
 
 

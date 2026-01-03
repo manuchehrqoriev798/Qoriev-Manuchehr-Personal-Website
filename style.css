@@ -547,8 +547,12 @@ body.dark-mode .btn-box .d-CV{
 .img-hero img{
     position: relative;
     width: 400px;
-    height: auto;
+    height: 380px;
     z-index: 10;
+    border-radius: 48%;
+    object-fit: cover;
+    object-position: center 20%;
+    margin-top: 110px;
 }
 
 .rotate-text{

@@ -136,31 +136,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// const themeSwitch = document.getElementById('theme-switch');
-// const body = document.body;
+// Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
 
-// // Check the user's preference from local storage
-// const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+// Check user's preference from local storage
+const isDarkMode = localStorage.getItem('dark-mode') === 'true';
 
-// // Set the initial theme based on user preference
-// if (isDarkMode) {
-//     body.classList.add('dark-mode');
-//     themeSwitch.checked = true;
-// }
+// Set initial theme based on user preference
+if (isDarkMode) {
+    document.body.classList.add('dark-mode');
+}
 
-// // Function to toggle the theme
-// function toggleTheme() {
-//     if (body.classList.contains('dark-mode')) {
-//         body.classList.remove('dark-mode');
-//         localStorage.setItem('dark-mode', 'false');
-//     } else {
-//         body.classList.add('dark-mode');
-//         localStorage.setItem('dark-mode', 'true');
-//     }
-// }
-
-// // Listen for the switcher change event
-// themeSwitch.addEventListener('change', toggleTheme);
+// Toggle theme on click
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    localStorage.setItem('dark-mode', isDark);
+});
 
 
 

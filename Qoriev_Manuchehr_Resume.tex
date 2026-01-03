@@ -1,0 +1,201 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[english]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{lmodern} % Added for bold small caps support
+\usepackage{enumitem}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08003pt} % Fix fancyhdr warning
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{2pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-2pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\normalsize{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+  \item\small{
+    {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r} % Adjusted width
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeWorkExperience}[6]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    #1 & \small #3 \\
+    \small (#2) & \small #4 \\
+  \end{tabular*}\vspace{-4pt}
+  \resumeItemListStart
+    #5
+    \resumeItem{\textbf{Stack:} #6}
+  \resumeItemListEnd
+  \vspace{4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \textbf{\small #2}\\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\small$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=2pt, leftmargin=0.2in, labelwidth=0.15in, labelsep=0.1in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  filecolor=blue,
+  urlcolor=blue,
+  pdftitle={Overleaf Example},
+  pdfpagemode=UseNone,
+}
+% (Your preamble remains unchanged up to \begin{document})
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge \textbf{Manuchehr Qoriev}} \\
+  \vspace{6pt}
+  \normalsize
+  \href{https://www.linkedin.com/in/manuchehr-qoriev/}{linkedin.com/in/manuchehr-qoriev} \textbar\
+  \href{mailto:manuchehrqoriev798@gmail.com}{manuchehrqoriev798@gmail.com} \textbar\
+  \href{https://wa.me/992928481064}{+992 928 481 064}
+\end{center}
+
+\vspace{-12pt}
+\noindent\rule{\textwidth}{0.4pt}
+\vspace{-12pt}
+
+\normalsize Full Stack Developer with \textbf{2 years of experience} building high-performance enterprise applications.
+\vspace{-10pt}
+
+%-----------WORK EXPERIENCE-----------
+\section{Work Experience}
+\resumeSubHeadingListStart
+\resumeWorkExperience
+  {\textcolor{blue}{\href{https://agents.inc}{\textbf{AGENTS HQ GmbH}}} — Full Stack Developer}
+  {B2B AI platform specializing in enterprise intelligence agents}
+  {Germany (Remote)}
+  {June 2025 – Present (7+ months)}
+  {
+    \resumeItem{Collaborated with team of \textbf{16 developers} enhancing enterprise-class AI platform serving \textbf{15+ Fortune 500 clients} like Tesla, BMW, Bayer, BASF, and more with contracts totaling \textbf{3.5+ million Euro per year}.}
+    \resumeItem{Redesigned frontend architecture and design with optimized performance, maintaining all previous functionalities and adding \textbf{8 new features}, achieving \textbf{70\%} faster load times (FCP 3.5s → 0.9s, LCP 3.7s → 2.0s).}
+    \resumeItem{Optimized MongoDB and PostgreSQL database queries via adding batching, reducing API requests by \textbf{$\sim$10x}.}
+    \resumeItem{Reduced codebase by \textbf{120,000+ lines} from Frontend React and Backend Java while preserving all features.}
+    \resumeItem{Wrote complete onboarding documentation from scratch explaining frontend, backend, and database systems, replacing few outdated documents with comprehensive guides for streamlined developer onboarding.}
+  }
+  {React, JavaScript, Java, Python, MongoDB, PostgreSQL, Kafka, Grafana}
+\resumeWorkExperience
+  {\textcolor{blue}{\href{https://ucentralasia.org/about/governance-and-leadership/management-executive-committee/malik-kotadia}{\textbf{University of Central Asia}}} — Full Stack Developer}
+  {World-class private university serving Central Asia}
+  {Tajikistan, Kyrgyzstan (Remote)}
+  {March 2024 – May 2025 (1 year 3 months)}
+  {
+    \resumeItem{Led team of 3 developers in building Speech to Speech Tutor AI, answering student questions and providing coding support with interactive visualizations including sticky notes, graphs, and todo lists.}
+    \resumeItem{Lowered API cost by \textbf{$\sim$40x} by replacing OpenAI's gpt-realtime (\$32/1M input tokens, \$64/1M output tokens) with GPT-4.1 mini (\$0.80/1M input tokens, \$3.20/1M output tokens), with minimal performance impact.}
+    \resumeItem{Designed unique interruption system triggered by specific keywords to enhance user experience, leveraging Python for personalized context management and Go for high-performance concurrent speech processing.}
+  }
+  {React, JavaScript, Python, Go, Google Speech APIs, OpenAI API}
+\resumeWorkExperience
+  {\textcolor{blue}{\href{https://ctlt-onboarding.vercel.app/}{\textbf{Center for Teaching, Learning, and Technology}}} — Full Stack Developer}
+  {Educational technology center for faculty development}
+  {Kyrgyzstan}
+  {Sept. 2023 – March 2024 (7 months)}
+  {
+    \resumeItem{Built secure faculty platform featuring \textbf{3-layer} authentication, enabling seamless onboarding for \textbf{15+} faculty.}
+    \resumeItem{Deployed Voiceflow AI chatbot trained on CTLT's knowledge base with 12 videos and 7 PDFs.}
+  }
+  {React, JavaScript, Firebase, Voiceflow AI, Vercel}
+\resumeSubHeadingListEnd
+\vspace{-20pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt]
+  \item\normalsize{\textbf{Facial Recognition Attendance System}: Automated attendance system achieving \textbf{99.65\% accuracy} using DeepFace, featuring real-time face capture, liveness detection, and Excel report generation. \href{https://github.com/manuchehrqoriev798/Face-Recognition-Attendance-System}{GitHub} \textbar\ \href{https://drive.google.com/file/d/1wWwJ2HPIWyaTCj3xyllw3Dyz7YwQcu4H/view?usp=sharing}{Demo}}
+  \item\normalsize{\textbf{Personal Portfolio Website}: Responsive portfolio showcasing skills and contact information. \href{https://github.com/manuchehrqoriev798/Qoriev-Manuchehr-Personal-Website}{GitHub} \textbar\ \href{https://qoriev-manuchehr.vercel.app/}{Website}}
+\end{itemize}
+\vspace{-15pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item\normalsize{
+    \textcolor{blue}{\href{https://www.google.com/search?q=university+of+central+asia}{\textbf{University of Central Asia}}} \hfill Sept. 2021 - May 2025\\
+    Bachelor of Computer Science: GPA 3.7/4.0, Dean's List 2023 \hfill \textit{Naryn, Kyrgyzstan}
+  }
+\end{itemize}
+\vspace{-15pt}
+
+%-----------SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=1pt]
+  \item\normalsize{\textbf{Programming Languages}: Python, Go, Java, JavaScript}
+  \item\normalsize{\textbf{Technologies}: React, Node.js, Django, Flask, PostgreSQL, MongoDB, Redis, Firebase, Docker, Kubernetes, Kafka, TensorFlow, PyTorch, OpenCV, Git, GitHub Actions, AWS, Google Cloud, Azure, Linux}
+\end{itemize}
+\vspace{-15pt}
+
+\end{document}

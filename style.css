@@ -350,6 +350,7 @@ section{
 
 .hero-info{
     margin-top: 3rem;
+    padding-left: 1rem;
 }
 
 .hero-info h3{
@@ -378,6 +379,7 @@ body.dark-mode .hero-name{
     width: fit-content;
     position: relative;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .text-animate h2{
@@ -1548,6 +1550,12 @@ body.dark-mode footer p{
     .stat-item{
         font-size: 0.85rem;
     }
+    .text-animate h2{
+        font-size: 2rem;
+    }
+    .hero-info{
+        padding-left: 0.5rem;
+    }
     ul.navlist{
         display: none;
     }
@@ -1651,6 +1659,12 @@ body.dark-mode footer p{
     .text-animate{
         width: fit-content;
     }
+    .text-animate h2{
+        font-size: 1.6rem;
+    }
+    .hero-info{
+        padding-left: 0;
+    }
     .btn-box{
         width: 266px;
         margin-bottom: 3rem;
@@ -1724,6 +1738,9 @@ body.dark-mode footer p{
     }
     .logo{
         font-size: 1.1rem !important;
+    }
+    .text-animate h2{
+        font-size: 1.3rem;
     }
     .chatbot-container{
         right: 10px;

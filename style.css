@@ -233,6 +233,7 @@ ul.navlist{
     align-items: center;
     justify-content: end;
     grid-gap: .8rem;
+    flex-shrink: 0;
 }
 
 /* Theme Toggle */
@@ -1533,9 +1534,22 @@ body.dark-mode footer p{
     .proposal{
         display: none;
     }
+    header{
+        padding: 15px 4%;
+    }
+    .right-header{
+        gap: 0.5rem;
+    }
+    .right-header .btn{
+        padding: 8px 8px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
     .theme-toggle{
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        flex-shrink: 0;
     }
     .theme-toggle i{
         font-size: 1.1rem;
@@ -1585,11 +1599,39 @@ body.dark-mode footer p{
     .resume-preview-container{
         height: 900px;
     }
+    .chatbot-container{
+        right: 15px;
+        bottom: 20px;
+    }
+    .chatbot-name{
+        font-size: 12px;
+    }
 }
 
 @media(max-width:530px){
     html{
         font-size: 80%;
+    }
+    header{
+        padding: 12px 3%;
+    }
+    .right-header{
+        gap: 0.4rem;
+    }
+    .right-header .btn{
+        padding: 6px 6px;
+        font-size: 0.75rem;
+    }
+    .theme-toggle{
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+    }
+    .theme-toggle i{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 1.3rem !important;
     }
     section{
         padding: 50px 3%;
@@ -1640,10 +1682,42 @@ body.dark-mode footer p{
     .skill-category{
         padding: 1.2rem;
     }
+    .chatbot-container{
+        right: 12px;
+        bottom: 18px;
+    }
 }
 
-
-
+@media(max-width:380px){
+    header{
+        padding: 10px 2%;
+    }
+    .right-header{
+        gap: 0.3rem;
+    }
+    .right-header .btn{
+        padding: 5px 5px;
+        font-size: 0.7rem;
+    }
+    .theme-toggle{
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+    .theme-toggle i{
+        font-size: 0.9rem;
+    }
+    .logo{
+        font-size: 1.1rem !important;
+    }
+    .chatbot-container{
+        right: 10px;
+        bottom: 15px;
+    }
+    .chatbot-name{
+        font-size: 11px;
+    }
+}
 
 
 
@@ -1661,6 +1735,7 @@ body.dark-mode footer p{
     bottom: 30px;
     right: 30px;
     text-align: center;
+    z-index: 999;
 }
 
 /* Style for the chatbot name with animation */

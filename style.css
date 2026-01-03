@@ -1368,8 +1368,6 @@ footer{
     margin: 0 8%;
     padding: 2rem 0;
     border-top: 2px solid #e8e1e1;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 
@@ -1385,6 +1383,8 @@ footer{
     margin: 0 auto;
     padding-top: 30px;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
 }
 
 body.dark-mode footer p{
@@ -1597,6 +1597,18 @@ body.dark-mode footer p{
     .chatbot-name{
         font-size: 12px;
     }
+    .footer-social-media{
+        gap: 0.5rem;
+    }
+    .footer-social-media .social-media a{
+        width: 38px;
+        height: 38px;
+        font-size: 1.3rem;
+    }
+    .footer-social-media .bg-icon span{
+        width: 44px;
+        height: 44px;
+    }
 }
 
 @media(max-width:530px){
@@ -1677,6 +1689,21 @@ body.dark-mode footer p{
         right: 12px;
         bottom: 18px;
     }
+    .footer-social-media{
+        gap: 0.4rem;
+    }
+    .footer-social-media .social-media a{
+        width: 34px;
+        height: 34px;
+        font-size: 1.2rem;
+    }
+    .footer-social-media .bg-icon span{
+        width: 40px;
+        height: 40px;
+    }
+    footer{
+        margin: 0 3%;
+    }
 }
 
 @media(max-width:380px){
@@ -1707,6 +1734,25 @@ body.dark-mode footer p{
     }
     .chatbot-name{
         font-size: 11px;
+    }
+    .footer-social-media{
+        gap: 0.3rem;
+    }
+    .footer-social-media .social-media a{
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+    .footer-social-media .bg-icon span{
+        width: 36px;
+        height: 36px;
+    }
+    footer{
+        margin: 0 2%;
+        padding: 1.5rem 0;
+    }
+    footer p{
+        font-size: 0.85rem;
     }
 }
 

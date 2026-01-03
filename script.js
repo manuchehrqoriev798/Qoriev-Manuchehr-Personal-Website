@@ -118,10 +118,11 @@ document.addEventListener('DOMContentLoaded', function() {
 // Dark Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
 
-// Check user's preference from local storage
-const isDarkMode = localStorage.getItem('dark-mode') === 'true';
+// Check user's preference from local storage (default to dark mode)
+const savedTheme = localStorage.getItem('dark-mode');
+const isDarkMode = savedTheme === null || savedTheme === 'true';
 
-// Set initial theme based on user preference
+// Set initial theme based on user preference (dark mode by default)
 if (isDarkMode) {
     document.body.classList.add('dark-mode');
 }

@@ -1519,9 +1519,6 @@ body.dark-mode footer p{
     .portfolio-gallery{
         grid-template-columns: repeat(auto-fill,minmax(250px , 1fr));
     }
-    .img-hero{
-        margin-top: 3rem;
-    }
 }
 
 @media(max-width:768px){
@@ -1659,6 +1656,7 @@ body.dark-mode footer p{
     }
     .img-hero img{
         width: 100%;
+        margin-top: 0;
     }
     .text-animate{
         width: fit-content;

@@ -10,7 +10,7 @@
 
 html{
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     scrollbar-width: auto;
     scrollbar-color: #e6006d transparent;
 }
@@ -388,23 +388,20 @@ body.dark-mode .hero-name{
     background: var(--gradient-color-bg);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
-    background-position: 0 0;
-    transition: .6s;
+    background-position: -28rem 0;
     letter-spacing: 2px;
-    animation: moveText 3s linear infinite;
-    animation-delay: 2s;
+    animation: moveText 4s ease-in-out infinite;
 }
 
 .text-animate h2::before{
     content: "";
     position: absolute;
     top: 7px;
-    left: -3px;
+    left: 0;
     width: 0;
     height: 70%;
     border-right: 2px solid var(--main-color);
-    animation: moveCursorText 3s linear infinite;
-    animation-delay: 2s;
+    animation: moveCursorText 4s ease-in-out infinite;
 }
 
 
@@ -534,13 +531,15 @@ body.dark-mode .btn-box .d-CV{
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: animate 1s linear infinite;
+    /* Disabled rotation - might cause layout issues */
+    /* animation: animate 1s linear infinite; */
 }
 
 .img-hero{
     position: relative;
-    animation: floatImage 4s ease-in-out infinite;
-    animation-delay: 3s;
+    /* Disabled float animation - was causing page height changes */
+    /* animation: floatImage 4s ease-in-out infinite; */
+    /* animation-delay: 3s; */
 }
 
 .img-hero img{
@@ -1362,7 +1361,7 @@ body.dark-mode .portfolio{
 footer{
     text-align: center;
     margin: 0 8%;
-    padding: 2rem 0;
+    padding: 2rem 0 50px 0;
     border-top: 2px solid #e8e1e1;
 }
 
@@ -1422,27 +1421,29 @@ body.dark-mode footer p{
 /*======================= @keyframes ============================ */
 
 @keyframes moveText{
-    0%,10%,100%{
-        background-position: -18rem 0;
+    0%{
+        background-position: -28rem 0;
     }
-
-    65%,85%{
-        background-position: 0rem 0;
+    50%,70%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -28rem 0;
     }
 }
 
 @keyframes moveCursorText{
-    0%,10%,100%{
+    0%{
         width: 0;
+        opacity: 1;
     }
-
-    65%,78%,85%{
+    50%,70%{
         width: 100%;
         opacity: 1;
     }
-
-    75%,85%{
-        opacity: 0;
+    100%{
+        width: 0;
+        opacity: 1;
     }
 }
 

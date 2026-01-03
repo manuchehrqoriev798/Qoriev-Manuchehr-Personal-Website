@@ -85,12 +85,14 @@ function activeMenu(){
 activeMenu();
 window.addEventListener("scroll",activeMenu);
 
+
 // scroll reveal
 
+/* ScrollReveal disabled - was causing page height changes
 ScrollReveal({ 
-    distance:"90px",
-    duration:2000,
-    delay:200,
+    distance:"20px",
+    duration:1000,
+    delay:100,
     // reset: true ,
 });
 
@@ -100,6 +102,7 @@ ScrollReveal().reveal('.hero-info,.main-text,.proposal,.heading', { origin: "top
 ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });
 ScrollReveal().reveal('.about-content,.skills,.resume-content', { origin: "right" });
 ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero,.skills-grid', { origin: "bottom" });
+*/
 
 
 

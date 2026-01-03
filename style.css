@@ -368,7 +368,7 @@ body.dark-mode .hero-name{
 }
 
 .text-animate{
-    width: auto;
+    width: fit-content;
     position: relative;
     white-space: nowrap;
 }
@@ -1431,7 +1431,7 @@ body.dark-mode footer p{
 
 @keyframes moveText{
     0%,10%,100%{
-        background-position: -24rem 0;
+        background-position: -18rem 0;
     }
 
     65%,85%{
@@ -1649,7 +1649,7 @@ body.dark-mode footer p{
         width: 100%;
     }
     .text-animate{
-        width: 23.8rem;
+        width: fit-content;
     }
     .btn-box{
         width: 266px;

@@ -12,7 +12,7 @@ html{
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: auto;
-    scrollbar-color: #e6006d transparent;
+    scrollbar-color: #d35400 transparent;
 }
 
 body{
@@ -37,9 +37,9 @@ body{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg,rgba(200,1,100,1)0%,
-                                        rgba(130,8,130,1)51%,
-                                        rgba(80,13,150,1)100%);
+    background: linear-gradient(180deg, rgba(240,180,41,1) 0%,
+                                        rgba(230,126,34,1) 51%,
+                                        rgba(192,57,43,1) 100%);
     background-clip: padding-box;
 }
 
@@ -67,10 +67,10 @@ body{
 :root{
     --bg-color:#e3edf7;
     --gradient-white-bg:linear-gradient(0deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
-    --gradient-color-bg:linear-gradient(180deg,rgba(247,1,120,1)0%,
-                                                rgba(160,8,156,1)51%,
-                                                rgba(99,13,178,1)100%);
-    --main-color:#e6006d;
+    --gradient-color-bg:linear-gradient(180deg, rgba(240,180,41,1) 0%,
+                                                rgba(230,126,34,1) 51%,
+                                                rgba(192,57,43,1) 100%);
+    --main-color:#d35400;
     --font-color:#90979f;
     --text-color:#000;
     --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
@@ -273,7 +273,7 @@ ul.navlist{
 
 .theme-toggle .bx-moon{
     opacity: 0;
-    color: #9b59b6;
+    color: #d4a017;
 }
 
 body.dark-mode .theme-toggle .bxs-sun{
@@ -386,7 +386,7 @@ body.dark-mode .hero-name{
     font-size: 2.5rem;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 0.1vw #770753;
+    -webkit-text-stroke: 0.1vw #a04000;
     background: var(--gradient-color-bg);
     background-repeat: no-repeat;
     -webkit-background-clip: text;
@@ -429,7 +429,7 @@ body.dark-mode .hero-subtitle{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.7rem;
+    gap: 0.85rem;
     margin: 1.5rem 0 3rem 0;
     padding-left: 0;
 }
@@ -437,16 +437,22 @@ body.dark-mode .hero-subtitle{
 .stat-item{
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    color: var(--font-color);
-    font-size: 0.95rem;
+    gap: 0.9rem;
+    color: #5c636a;
+    font-size: 1.12rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+body.dark-mode .stat-item{
+    color: #c0c0c0;
 }
 
 .stat-item i{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--main-color);
-    width: 20px;
-    min-width: 20px;
+    width: 24px;
+    min-width: 24px;
     text-align: center;
 }
 
@@ -581,7 +587,7 @@ body.dark-mode .btn-box .d-CV{
     content: "";
     position: absolute;
     inset: 20px;
-    background: #00aaff;
+    background: #e67e22;
     border-radius: 50%;
     z-index: 1;
 }
@@ -599,10 +605,16 @@ body.dark-mode .btn-box .d-CV{
     position: absolute;
     width: 490px;
     height: 490px;
-    background: #f2f6fb;
+    background: #1a1510;
     border-radius: 50%;
-    box-shadow: 0 1px 6px 5.94px rgba(0,0,0,0.2);
+    box-shadow: 0 1px 6px 5.94px rgba(0,0,0,0.4);
     animation: rotateText 30s linear infinite;
+}
+
+.rotate-text .text p{
+    color: #d4a017;
+    font-weight: 600;
+    font-size: 1.15rem;
 }
 
 .text b{
@@ -1307,10 +1319,10 @@ body.dark-mode .tex-btn:hover{
                       rgba(60,64,67,0.15)0px 2px 6px 2px;
     }
     5% {
-        background: linear-gradient(135deg, rgba(233, 30, 99, 0.15) 0%, rgba(103, 58, 183, 0.15) 100%);
-        border-color: rgba(233, 30, 99, 0.4);
-        box-shadow: rgba(233, 30, 99, 0.2)0px 2px 4px 0,
-                      rgba(103, 58, 183, 0.2)0px 4px 8px 2px;
+        background: linear-gradient(135deg, rgba(240, 180, 41, 0.2) 0%, rgba(192, 57, 43, 0.2) 100%);
+        border-color: rgba(211, 84, 0, 0.5);
+        box-shadow: rgba(240, 180, 41, 0.25)0px 2px 4px 0,
+                      rgba(192, 57, 43, 0.25)0px 4px 8px 2px;
     }
 }
 
@@ -1549,7 +1561,7 @@ body.dark-mode footer p{
         gap: 0.5rem;
     }
     .stat-item{
-        font-size: 0.85rem;
+        font-size: 1rem;
     }
     .text-animate h2{
         font-size: 2rem;
@@ -1809,7 +1821,7 @@ body.dark-mode footer p{
     }
     50% {
         transform: scale(1.2);
-        color: #007BFF; /* You can choose any color */
+        color: #d35400;
     }
     100% {
         transform: scale(1);

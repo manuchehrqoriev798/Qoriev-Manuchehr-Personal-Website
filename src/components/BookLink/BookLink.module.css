@@ -1,0 +1,50 @@
+.bookLink {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: var(--gradient-accent);
+  color: var(--color-btn-on-accent);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: var(--shadow-button);
+  transition: all 0.3s ease;
+}
+
+.bookLink:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.bookLink i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .bookLink {
+    right: 15px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 530px) {
+  .bookLink {
+    right: 12px;
+    bottom: 18px;
+    padding: 10px 16px;
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .bookLink {
+    right: 10px;
+    bottom: 15px;
+  }
+}

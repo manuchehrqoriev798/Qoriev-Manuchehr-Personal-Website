@@ -1,0 +1,53 @@
+.header {
+  padding: 15px 8%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: var(--gradient-bg-header);
+  z-index: 100;
+  transition: 0.3s;
+}
+
+/*
+ * One track holding both toggles, so they read as a single control cluster
+ * instead of three unrelated shapes. Everything inside inherits this height,
+ * radius and border, and the segments themselves are borderless.
+ */
+.controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--gradient-bg-surface);
+  flex-shrink: 0;
+}
+
+.divider {
+  width: 1px;
+  align-self: stretch;
+  margin: 4px 1px;
+  background: var(--color-border);
+}
+
+@media (max-width: 530px) {
+  .header {
+    padding: 12px 3%;
+  }
+
+  .controls {
+    gap: 3px;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 380px) {
+  .header {
+    padding: 10px 2%;
+  }
+}

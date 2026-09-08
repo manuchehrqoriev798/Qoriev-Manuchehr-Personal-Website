@@ -1,0 +1,37 @@
+.footer {
+  text-align: center;
+  margin: 0 8%;
+  padding: 2rem 0 50px;
+}
+
+.footer p {
+  color: var(--color-text);
+}
+
+body.dark-mode .footer p {
+  color: var(--color-text);
+}
+
+.copyrightSymbol {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+@media (max-width: 530px) {
+  .footer {
+    margin: 0 3%;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer {
+    margin: 0 2%;
+    padding: 1.5rem 0;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
+}

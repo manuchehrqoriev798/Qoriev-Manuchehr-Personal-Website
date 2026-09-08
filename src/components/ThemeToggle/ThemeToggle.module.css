@@ -1,0 +1,67 @@
+/*
+ * A segment of the header control track, not a standalone circle: same height
+ * as the language options, no border of its own, the track provides the frame.
+ */
+.themeToggle {
+  width: 30px;
+  height: 26px;
+  border: none;
+  border-radius: 999px;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.25s ease;
+}
+
+.themeToggle:hover {
+  background: var(--color-control-hover);
+}
+
+.themeToggle i {
+  font-size: 1.05rem;
+  position: absolute;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.themeToggle i:first-of-type {
+  opacity: 1;
+  color: var(--color-theme-sun);
+}
+
+.themeToggle i:last-of-type {
+  opacity: 0;
+  color: var(--color-theme-moon);
+}
+
+body.dark-mode .themeToggle i:first-of-type {
+  opacity: 0;
+}
+
+body.dark-mode .themeToggle i:last-of-type {
+  opacity: 1;
+}
+
+@media (max-width: 530px) {
+  .themeToggle {
+    width: 28px;
+    height: 24px;
+  }
+
+  .themeToggle i {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .themeToggle {
+    width: 26px;
+    height: 22px;
+  }
+
+  .themeToggle i {
+    font-size: 0.9rem;
+  }
+}

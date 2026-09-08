@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-scrollbar) transparent;
+}
+
+body {
+  /* The social icon glow is a rotating square: its bounding box swells to
+     50px * sqrt(2) mid-spin and overhangs the row, which pushed the page
+     wider than the viewport on 320px screens. It is decorative, so clip it. */
+  overflow-x: hidden;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg-page);
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+/* ========== LIGHT THEME ========== */
+:root {
+  --color-bg-page: #ffffff;
+  --color-bg-card: #ffffff;
+
+  /* Text */
+  --color-text: #000;
+  --color-stat: #000;
+  --color-btn-on-accent: #fff;
+
+  /* Borders */
+  --color-border: #e8e8e8;
+
+  --color-accent: #d35400;
+  --color-stroke: #a04000;
+  --color-scrollbar: #d35400;
+  --color-icon-gold: #c0392b;
+
+  /* Decorative (rotate ring, theme toggle – fixed for brand) */
+  --color-rotate-ring-border: #eaeef0;
+  --color-rotate-ring-inner: #e67e22;
+  --color-rotate-bg: #1a1510;
+  --color-rotate-text: #d4a017;
+  --color-theme-sun: #f39c12;
+  --color-theme-moon: #d4a017;
+  --color-text-subtle: #6b6b6b;
+  --color-control-hover: rgba(0, 0, 0, 0.06);
+
+  --shadow-button: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+  --shadow-hover: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+  --shadow-rotate: 0 1px 6px 5.94px rgba(0, 0, 0, 0.4);
+
+  --gradient-bg-header: linear-gradient(0deg, #ffffff 0%, #ffffff 100%);
+  --gradient-bg-surface: linear-gradient(98deg, #ffffff 0%, #ffffff 100%);
+  --gradient-accent: linear-gradient(
+    180deg,
+    rgba(240, 180, 41, 1) 0%,
+    rgba(230, 126, 34, 1) 51%,
+    rgba(192, 57, 43, 1) 100%
+  );
+}
+
+/* ========== DARK THEME ========== */
+body.dark-mode {
+  --color-bg-page: #000;
+  --color-bg-card: #0a0a0a;
+
+  --color-text: #fff;
+  --color-stat: #e67e22;
+  --color-btn-on-accent: #fff;
+
+  --color-border: #1a1a1a;
+
+  --color-accent: #d35400;
+  --color-stroke: #a04000;
+  --color-scrollbar: #d35400;
+  --color-icon-gold: #e67e22;
+
+  --color-rotate-ring-border: #eaeef0;
+  --color-rotate-ring-inner: #e67e22;
+  --color-rotate-bg: #1a1510;
+  --color-rotate-text: #d4a017;
+  --color-theme-sun: #f39c12;
+  --color-theme-moon: #f0f0f0;
+  --color-text-subtle: #9a9a9a;
+  --color-control-hover: rgba(255, 255, 255, 0.09);
+
+  --shadow-button: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+  --shadow-hover: rgba(0, 0, 0, 0.19) 0 10px 20px, rgba(0, 0, 0, 0.23) 0 6px 6px;
+  --shadow-rotate: 0 1px 6px 5.94px rgba(0, 0, 0, 0.4);
+
+  --gradient-bg-header: linear-gradient(0deg, #0a0a0a 0%, #050505 51%, #000 100%);
+  --gradient-bg-surface: linear-gradient(98deg, #0a0a0a 0%, #0d0d0d 100%);
+  --gradient-accent: linear-gradient(
+    180deg,
+    rgba(240, 180, 41, 1) 0%,
+    rgba(230, 126, 34, 1) 51%,
+    rgba(192, 57, 43, 1) 100%
+  );
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-accent);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gradient-accent);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 530px) {
+  html {
+    font-size: 80%;
+  }
+}
+
